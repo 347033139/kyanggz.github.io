@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- saved from url=(0125)http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6.php?pg=%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>循环控制</title>		
+	<link rel="stylesheet" href="./循环控制_files/style.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="./循环控制_files/font-awesome.min.css" media="all">	
+</head>
+	<body style="">
+		<div class="container navigation">
+			<div class="row">
+				<div class="col nav">
+				</div>
+			</div>
+		</div>
+		<div class="container main">
+			<div class="row">
+				<div class="col left-column">
+	<div class="tab">
+		Perl 循环控制	</div>
+	<div class="sidebar-box gallery-list">
+		<div class="design" id="leftcolumn">
+							<a target="_top" title="教程" href="./教程.html?pg=教程">
+								教程
+							</a>
+							<a target="_top" title="简介" href="./简介.html?pg=简介">
+								简介
+							</a>
+							<a target="_top" title="环境安装" href="h./环境安装.html?pg=环境安装">
+								环境安装
+							</a>
+							<a target="_top" title="基础语法" href="./基础语法.html?pg=基础语法">
+								基础语法
+							</a>
+							<a target="_top" title="数据类型" href="./数据类型.html?pg=数据类型">
+								数据类型
+							</a>
+							<a target="_top" title="变量" href="./变量.html?pg=变量">
+								变量
+							</a>
+							<a target="_top" title="标量" href="./标量.html?pg=标量">
+								标量
+							</a>
+							<a target="_top" title="数组" href="./数组.html?pg=数组">
+								数组
+							</a>
+							<a target="_top" title="哈希" href="./哈希.html?pg=哈希">
+								哈希
+							</a>
+							<a target="_top" title="条件语句" href="./条件语句.html?pg=条件语句">
+								条件语句	
+							</a>
+							<a target="_top" title="Perl 循环" href="./循环.html?pg=循环">
+								循环
+							</a>
+							<a target="_top" title="Perl 循环控制" href="./循环控制.html?pg=循环控制" style="background-color: rgb(150, 185, 125); font-weight: bold; color: rgb(255, 255, 255);">
+								循环控制
+							</a>
+							<a target="_top" title="运算符" href="./运算符.html?pg=运算符">
+								运算符
+							</a>
+							<a target="_top" title="子程序(函数)" href="./子程序.html?pg=子程序">
+								子程序(函数)	
+							</a>
+							<a target="_top" title="引用" href="./引用.html?pg=引用">
+								引用
+							</a>
+							<a target="_top" title="格式化输出" href="./格式化输出.html?pg=格式化输出">
+								格式化输出
+							</a>
+							<a target="_top" title="文件操作" href="./文件操作.html?pg=文件操作">
+								文件操作
+							</a>
+							<a target="_top" title="目录操作" href="./目录操作.html?pg=目录操作">
+								目录操作	
+							</a>
+							<a target="_top" title="特殊变量" href="./特殊变量.html?pg=特殊变量">
+								特殊变量	
+							</a>
+							<a target="_top" title="正则表达式" href="./正则表达式.html?pg=正则表达式">
+								正则表达式
+							</a>
+		</div>
+	</div>
+</div>
+				<div class="col middle-column">
+					<div class="article" style="background-color: rgb(255, 255, 255);">
+						<div class="previous-next-links">
+		<div class="previous-design-link">
+		<a href="./循环.html?pg=循环" rel="prev" title="循环">
+			Perl 循环		</a>
+	</div>
+	<div class="next-design-link">
+		<a href="./运算符.html?pg=运算符" rel="next" title="运算符">
+			Perl 运算符		</a>
+	</div>
+</div>
+						<div class="article-body">
+							<div class="article-intro" id="content">
+<h2>循环控制语句</h2>
+<p>循环控制语句改变了代码的执行顺序，通过它你可以实现代码的跳转。</p><p>
+Perl 提供了下列的循环控制语句:</p>
+<table class="reference">
+<tbody><tr><th style="width:30%">控制语句</th><th>描述</th></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6.php?pg=%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6#next" title="Perl next 语句">next 语句</a></p></td><td>停止执行从next语句的下一语句开始到循环体结束标识符之间的语句，转去执行continue语句块，然后再返回到循环体的起始处开始执行下一次循环。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6.php?pg=%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6#last" title="Perl last 语句">last 语句</a></p></td><td>退出循环语句块，从而结束循环</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6.php?pg=%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6#continue" title="Perl continue 语句">continue 语句</a></p></td><td>continue 语句块通常在条件语句再次判断前执行。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6.php?pg=%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6#redo" title="Perl redo 语句">redo 语句</a></p></td><td>redo 语句直接转到循环体的第一行开始重复执行本次循环，redo语句之后的语句不再执行，continue语句块也不再执行；</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6.php?pg=%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6#goto" title="Perl goto 语句">goto 语句</a></p></td><td>Perl 有三种 goto 形式：got LABLE，goto EXPR，和 goto &amp;NAME。</td></tr>
+</tbody></table>
+<hr>
+			
+			<h1 id="next">NEXT 语句</h1>
+
+<p>Perl next 语句用于停止执行从next语句的下一语句开始到循环体结束标识符之间的语句，转去执行continue语句块，然后再返回到循环体的起始处开始执行下一次循环。</p>
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="kwd">next</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> LABEL </span><span class="pun">];</span></pre>
+<p>
+其中 LABEL 是可选的，如果没有指定 LABEL，next 语句将返回到循环体的起始处开始执行下一次循环。</p>
+<div class="example"> 
+<h2 class="example">实例 1</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">10</span><span class="hl-code">;
+</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> == </span><span class="hl-number">15</span><span class="hl-brackets">)</span><span class="hl-code">
+   </span><span class="hl-brackets">{</span><span class="hl-code">
+       </span><span class="hl-comment"># 跳出迭代</span><span class="hl-code">
+       </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+       </span><span class="hl-reserved">next</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-code">
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为: </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_10-19-13.jpg"></p>
+<div class="example"> 
+<h2 class="example">实例 2</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">;
+</span><span class="hl-var">$b</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">;
+</span><span class="hl-reserved">first: while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">3</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+   </span><span class="hl-reserved">secound: while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$b</span><span class="hl-code"> &lt; </span><span class="hl-number">3</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> == </span><span class="hl-number">2 </span><span class="hl-brackets">)</span><span class="hl-code">
+      </span><span class="hl-brackets">{</span><span class="hl-code">
+         </span><span class="hl-comment"># 跳出迭代</span><span class="hl-code">
+         </span><span class="hl-reserved">next first</span><span class="hl-code">;
+      </span><span class="hl-brackets">}</span><span class="hl-code">
+      </span><span class="hl-var">$b</span><span class="hl-code"> = </span><span class="hl-var">$b</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+      </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为: </span><span class="hl-var">$a</span><span class="hl-string">; </span><span class="hl-string">b 的值为: </span><span class="hl-var">$b</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span>
+   <span class="hl-var">$b</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_10-57-31.jpg"></p>
+<hr>
+			<h1 id="last">LAST 语句</h1>
+
+<p>Perl last 语句用于退出循环语句块，从而结束循环，last语句之后的语句不再执行，continue语句块也不再执行。</p>
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="kwd">last</span><span class="pln"> </span><span class="pun">[</span><span class="pln">LABEL</span><span class="pun">];</span></pre>
+<h3>流程图</h3><p>
+<img src="./循环控制_files/ERShqly0WPBE4Sh4.png"></p>
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">10</span><span class="hl-code">;
+</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> == </span><span class="hl-number">15</span><span class="hl-brackets">)</span><span class="hl-code">
+   </span><span class="hl-brackets">{</span><span class="hl-code">
+       </span><span class="hl-comment"># 退出循环</span><span class="hl-code">
+       </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+       </span><span class="hl-reserved">last</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-code">
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为: </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-08-23.jpg"></p>
+<hr>
+			<h1 id="continue">CONTINUE 语句</h1>
+
+<p>Perl continue 块通常在条件语句再次判断前执行。</p>
+<p>
+continue 语句可用在 while 和 foreach 循环中。</p>
+<h3>语法</h3>
+<p>while 循环中 continue 语句语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="kwd">while</span><span class="pun">(</span><span class="pln">condition</span><span class="pun">){</span><span class="pln">
+   statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="kwd">continue</span><span class="pun">{</span><span class="pln">
+   statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>foreach 循环中 continue 语句语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="kwd">foreach</span><span class="pln"> $a </span><span class="pun">(</span><span class="lit">@listA</span><span class="pun">){</span><span class="pln">
+   statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="kwd">continue</span><span class="pun">{</span><span class="pln">
+   statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h3>实例</h3>
+<p>while 循环中使用 continue 语句：</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-comment">#/usr/bin/perl</span><span class="hl-code">
+   
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">;
+</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">3</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a = </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">continue</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-21-51.jpg"></p>
+<p>foreach  循环中使用 continue 语句：</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-comment">#/usr/bin/perl</span><span class="hl-code">
+   
+</span><span class="hl-var">@list</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-number">1</span><span class="hl-code">, </span><span class="hl-number">2</span><span class="hl-code">, </span><span class="hl-number">3</span><span class="hl-code">, </span><span class="hl-number">4</span><span class="hl-code">, </span><span class="hl-number">5</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-reserved">foreach</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-var">@list</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a = </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">continue</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">last</span><span class="hl-code"> </span><span class="hl-reserved">if</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> == </span><span class="hl-number">4</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-23-14.jpg"></p>
+<hr>
+			<h1 id="redo">REDO 语句</h1>
+
+<p>Perl redo 语句直接转到循环体的第一行开始重复执行本次循环，redo语句之后的语句不再执行，continue语句块也不再执行。</p>
+<p>
+continue 语句可用在 while 和 foreach 循环中。</p>
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="kwd">redo</span><span class="pln"> </span><span class="pun">[</span><span class="pln">LABEL</span><span class="pun">]</span></pre>
+<p>其中 LABEL 是可选的。</p>
+<p>
+带标号修饰符LABEL的redo语句表示把循环控制流程直接转到与标号修饰符LABEL相关联的语句块的第一行处开始执行，而不再执行redo语句之后的语句和continue语句块；</p><p>不带标号修饰符LABEL的redo语句表示把循环控制流程直接转到当前语句块的第一行处开始执行，而不再执行redo语句之后的语句和continue语句块；</p><p>如果是在for循环中或者是带有continue语句块，则for循环中的递增列表和continue语句块都不再被执行；</p>
+<h3>流程图</h3>
+<p><img src="./循环控制_files/uj2WtOPIzZ3W1TQr.png"></p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-comment">#/usr/bin/perl</span><span class="hl-code">
+   
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">;
+</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">10</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> == </span><span class="hl-number">5</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+      </span><span class="hl-reserved">redo</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-code">
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a = </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">continue</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-59-46.jpg"></p>
+<hr>
+			<h1 id="goto">GOTO 语句</h1>
+
+<p>Perl 有三种 goto 形式：got LABLE，goto EXPR，和 goto &amp;NAME：</p>
+<table class="reference">
+<tbody><tr><th style="width:5%">序号</th><th>goto 类型</th></tr>
+<tr><td style="width:5%">1</td><td><b>goto LABEL</b><p>找出标记为 LABEL 的语句并且从那里重新执行。</p></td></tr>
+<tr><td style="width:5%">2</td><td><b>goto EXPR</b><p>goto EXPR 形式只是 goto LABEL 的一般形式。它期待表达式生成一个标记名称，并跳到该标记处执行。</p></td></tr>
+<tr><td style="width:5%">3</td><td><b>goto &amp;NAME</b><p>它把正 在运行着的子进程替换为一个已命名子进程的调用。</p></td></tr>
+</tbody></table>
+
+<p></p>
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="kwd">goto</span><span class="pln"> LABEL
+
+</span><span class="pun">或</span><span class="pln">
+
+</span><span class="kwd">goto</span><span class="pln"> EXPR
+
+</span><span class="pun">或</span><span class="pln">
+
+</span><span class="kwd">goto</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">NAME</span></pre>
+<h3>流程图</h3>
+<p>
+<img src="./循环控制_files/6MJfHRLsRGHLRCel__original.png">
+</p><h3>实例</h3>
+<p>以下两个实例在变量 $a 为 15 时跳出输出。</p>
+<p>以下是一个常用的 goto 实例：</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-comment">#/usr/bin/perl</span><span class="hl-code">
+   
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">10</span><span class="hl-code">;
+</span><span class="hl-identifier">LOOP</span><span class="hl-code">:</span><span class="hl-reserved">do</span><span class="hl-code">
+</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> == </span><span class="hl-number">15</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+       </span><span class="hl-comment"># 跳过迭代</span><span class="hl-code">
+       </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+       </span><span class="hl-comment"># 使用 goto LABEL 形式</span><span class="hl-code">
+       </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">跳出输出 </span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+       </span><span class="hl-reserved">goto</span><span class="hl-code"> </span><span class="hl-identifier">LOOP</span><span class="hl-code">;
+       </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">这一句不会被执行 </span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a = </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+    </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-49-20.jpg"></p>
+<p>
+以下实例使用了 goto EXPR形式。我们使用了两个字符串，并使用点号 (.) 来链接。 </p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">10</span><span class="hl-code">;
+</span><span class="hl-var">$str1</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">LO</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-var">$str2</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">OP</span><span class="hl-quotes">"</span><span class="hl-code">;
+ 
+</span><span class="hl-identifier">LOOP</span><span class="hl-code">:</span><span class="hl-reserved">do</span><span class="hl-code">
+</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> == </span><span class="hl-number">15</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+       </span><span class="hl-comment"># 跳过迭代</span><span class="hl-code">
+       </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+       </span><span class="hl-comment"># 使用 goto EXPR 形式</span><span class="hl-code">
+       </span><span class="hl-reserved">goto</span><span class="hl-code"> </span><span class="hl-var">$str1</span><span class="hl-code">.</span><span class="hl-var">$str2</span><span class="hl-code">;    </span><span class="hl-comment"># 类似 goto LOOP</span><span class="hl-code">
+    </span><span class="hl-brackets">}</span><span class="hl-code">
+    </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a = </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+    </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+</div>
+</div><p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-54-18.jpg"></p>
+
+							</div>
+						</div>
+						<div class="previous-next-links">
+		<div class="previous-design-link">
+		<a href="./循环.html?pg=循环" rel="prev" title="循环">
+			Perl 循环		</a>
+	</div>
+	<div class="next-design-link">
+		<a href="./运算符.html?pg=运算符" rel="next" title="运算符">
+			Perl 运算符		</a>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</body></html>
