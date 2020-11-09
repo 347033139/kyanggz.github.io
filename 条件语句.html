@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!-- saved from url=(0125)http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5.php?pg=%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>条件语句</title>		
+	<link rel="stylesheet" href="./files/style.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="./files/font-awesome.min.css" media="all">	
+</head>
+	<body style="">
+		<div class="container navigation">
+			<div class="row">
+				<div class="col nav">
+				</div>
+			</div>
+		</div>
+		<div class="container main">
+			<div class="row">
+				<div class="col left-column">
+	<div class="tab">
+		Perl 条件语句	</div>
+	<div class="sidebar-box gallery-list">
+		<div class="design" id="leftcolumn">
+							<a target="_top" title="教程" href="./教程.html?pg=教程">
+								教程
+							</a>
+							<a target="_top" title="简介" href="./简介.html?pg=简介">
+								简介
+							</a>
+							<a target="_top" title="环境安装" href="h./环境安装.html?pg=环境安装">
+								环境安装
+							</a>
+							<a target="_top" title="基础语法" href="./基础语法.html?pg=基础语法">
+								基础语法
+							</a>
+							<a target="_top" title="数据类型" href="./数据类型.html?pg=数据类型">
+								数据类型
+							</a>
+							<a target="_top" title="变量" href="./变量.html?pg=变量">
+								变量
+							</a>
+							<a target="_top" title="标量" href="./标量.html?pg=标量">
+								标量
+							</a>
+							<a target="_top" title="数组" href="./数组.html?pg=数组">
+								数组
+							</a>
+							<a target="_top" title="哈希" href="./哈希.html?pg=哈希">
+								哈希
+							</a>
+							<a target="_top" title="条件语句" href="./条件语句.html?pg=条件语句" style="background-color: rgb(150, 185, 125); font-weight: bold; color: rgb(255, 255, 255);">
+								条件语句	
+							</a>
+							<a target="_top" title="Perl 循环" href="./循环.html?pg=循环">
+								循环
+							</a>
+							<a target="_top" title="Perl 循环控制" href="./循环控制.html?pg=循环控制">
+								循环控制
+							</a>
+							<a target="_top" title="运算符" href="./运算符.html?pg=运算符">
+								运算符
+							</a>
+							<a target="_top" title="子程序(函数)" href="./子程序.html?pg=子程序">
+								子程序(函数)	
+							</a>
+							<a target="_top" title="引用" href="./引用.html?pg=引用">
+								引用
+							</a>
+							<a target="_top" title="格式化输出" href="./格式化输出.html?pg=格式化输出">
+								格式化输出
+							</a>
+							<a target="_top" title="文件操作" href="./文件操作.html?pg=文件操作">
+								文件操作
+							</a>
+							<a target="_top" title="目录操作" href="./目录操作.html?pg=目录操作">
+								目录操作	
+							</a>
+							<a target="_top" title="特殊变量" href="./特殊变量.html?pg=特殊变量">
+								特殊变量	
+							</a>
+							<a target="_top" title="正则表达式" href="./正则表达式.html?pg=正则表达式">
+								正则表达式
+							</a>
+		</div>
+	</div>
+</div>
+				<div class="col middle-column">
+					<div class="article" style="background-color: rgb(255, 255, 255);">
+						<div class="previous-next-links">
+		<div class="previous-design-link">
+		<a href="./哈希.html?pg=哈希" rel="prev" title="哈希">
+			Perl 哈希		</a>
+	</div>
+	<div class="next-design-link">
+		<a href="./循环.html?pg=循环" rel="next" title="循环">
+			Perl 循环		</a>
+	</div>
+</div>
+						<div class="article-body">
+							<div class="article-intro" id="content">
+			<h1>Perl 条件语句</h1>
+<p>
+Perl 条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。</p><p>
+可以通过下图来简单了解条件语句的执行过程:</p>
+<p><img src="./files/decision_making.jpg"></p>
+<blockquote><p>注意，数字 0, 字符串 '0' 、 "" , 空 list () , 和 undef 为 <b>false</b> ，其他值均为 <b>true</b>。 true 前面使用 <b>!</b> 或 <b>not</b>则返回 false。</p></blockquote>
+<p>Perl 提供了下拉的条件语句：</p>
+
+<table class="reference">
+<tbody><tr><th style="width:35%">语句</th><th>描述</th></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5.php?pg=%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5#if%E8%AF%AD%E5%8F%A5">if 语句</a></p></td><td>一个 <b>if 语句</b> 由一个布尔表达式后跟一个或多个语句组成。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5.php?pg=%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5#if_else%E8%AF%AD%E5%8F%A5">if...else 语句</a></p></td><td>一个 <b>if 语句</b> 后可跟一个可选的 <b>else 语句</b>，else 语句在布尔表达式为假时执行。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5.php?pg=%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5#if_elsif_else%E8%AF%AD%E5%8F%A5">if...elsif...else 语句</a></p></td><td>您可以在一个 <b>if</b> 语句后可跟一个可选的 <b>elsif 语句</b>，然后再跟另一个 <b>else 语句</b>。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5.php?pg=%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5#unless%E8%AF%AD%E5%8F%A5">unless 语句</a></p></td><td>一个 <b>unless 语句</b> 由一个布尔表达式后跟一个或多个语句组成。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5.php?pg=%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5#unless_else%E8%AF%AD%E5%8F%A5">unless...else 语句</a></p></td><td>一个 <b>unless 语句</b> 后可跟一个可选的 <b>else 语句</b>。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5.php?pg=%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5#unless_elsif_else%E8%AF%AD%E5%8F%A5">unless...elsif..else 语句</a></p></td><td>一个 <b>unless 语句</b> 后可跟一个可选的 <b>elsif 语句</b>，然后再跟另一个 <b>else 语句</b>。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5.php?pg=%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5#switch%E8%AF%AD%E5%8F%A5">switch 语句</a></p></td><td>在最新版本的 Perl 中，我们可以使用 <b>switch</b> 语句。它根据不同的值执行对应的代码块。</td></tr>
+</tbody></table>
+<hr>
+			
+			<h1 id="if语句">IF 语句</h1>
+
+<p>
+Perl  if 语句由一个布尔表达式后跟一个或多个语句组成。</p>
+
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-reserved">boolean_expression</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 为 true 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span></pre>
+<p>如果布尔表达式 boolean_expression为 true，则 if 语句内的代码块将被执行。如果布尔表达式为 false，则 if 语句结束后的第一组代码（闭括号后）将被执行。</p>
+<h3>流程图</h3>
+<img src="./files/if_statement.jpg" alt="Perl 中的 if 语句">
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">10</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 if 语句判断布尔表达式</span><span class="hl-code">
+</span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 布尔表达式为true时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 小于 20</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 : </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 if 语句判断布尔表达式</span><span class="hl-code">
+</span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># i布尔表达式为true时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">变量 a 为 true</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 : </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
+</div>
+</div>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-14_15-19-34.jpg"></p>	
+<hr>
+			
+			<h1 id="if_else语句">IF...ELSE 语句</h1>
+
+<p>
+一个 if 语句 后可跟一个可选的 else 语句，else 语句在布尔表达式为 false 时执行。</p>
+
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-reserved">boolean_expression</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 为 true 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 为 false 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span></pre>
+<p>如果布尔表达式 boolean_expression 为 true，则执行 if 块内的代码。如果布尔表达式为 false，则执行 else 块内的代码。</p>
+<h3>流程图</h3><p>
+<img src="./files/if_else_statement.jpg" alt="C 中的 if...else 语句">
+
+</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">100</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 if 语句判断布尔表达式</span><span class="hl-code">
+</span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 布尔表达式为true时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 小于 20</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-code"> 
+    </span><span class="hl-comment"># 布尔表达式为false时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 大于 20</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 : </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 if 语句判断布尔表达式</span><span class="hl-code">
+</span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 布尔表达式为true时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 条件为 true</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-comment"># 布尔表达式为false时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 条件为 false</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 : </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
+</div>
+</div>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-14_15-24-07.jpg"></p>	
+<hr>
+			
+			<h1 id="if_elsif_else语句">IF...ELSIF...ELSE 语句</h1>
+
+<p>
+一个 if 语句后可跟一个可选的 elsif 语句，然后再跟另一个 else 语句。</p>
+<p>这种条件判断语句在多个条件的情况下非常有用。</p>
+
+<p>在使用 if , elsif , else 语句时你需要注意以下几点。</p>
+<ul class="list">
+<li><p>if 语句后可以跟上 0 个 或 1 个 else 语句，但是 elsif 后面必须有 else 语句。</p></li>
+<li><p>if 语句后可以跟上 0 个 或 1 个 elsif 语句，但它们必须写在 else 语句前。</p></li>
+<li><p>如果其中的一个 elsif 执行成功，其他的 elsif 和 else 将不再被执行。</p></li>
+</ul>
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-reserved">boolean_expression </span><span class="lit">1</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 1 为 true 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">
+</span><span class="hl-reserved">elsif</span><span class="hl-brackets">(</span><span class="hl-reserved"> boolean_expression </span><span class="lit">2</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 2 为 true 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">
+</span><span class="hl-reserved">elsif</span><span class="hl-brackets">(</span><span class="hl-reserved"> boolean_expression </span><span class="lit">3</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 3 为 true 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">
+</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 布尔表达式的条件都为 false 时执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span></pre>
+
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">100</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 == 判断两个数是否相等</span><span class="hl-code">
+</span><span class="hl-reserved">if</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code">  ==  </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 条件为 true 时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 20</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">elsif</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> ==  </span><span class="hl-number">30</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 条件为 true 时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 30</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 以上所有的条件为 false 时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-14_15-37-25.jpg"></p>	
+<hr>
+			
+			<h1 id="unless语句">UNLESS 语句</h1>
+
+<p>
+一个 unless 语句由一个布尔表达式后跟一个或多个语句组成。</p>
+
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">unless</span><span class="hl-brackets">(</span><span class="hl-reserved">boolean_expression</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 为 false 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span></pre>
+
+<p>如果布尔表达式 boolean_expression为 false，则 if 语句内的代码块将被执行。如果布尔表达式为 true，则 if 语句结束后的第一组代码（闭括号后）将被执行。</p>
+<h3>流程图</h3>
+<p>
+
+<img src="./files/1465371232-4668-unless-statement.jpg">
+</p>
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">20</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 unless 语句检测布尔表达式</span><span class="hl-code">
+</span><span class="hl-reserved">unless</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 布尔表达式为 false 时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 大于等于 20</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 : </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 unless 语句检测布尔表达式</span><span class="hl-code">
+</span><span class="hl-reserved">unless</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 布尔表达式为 false 时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">条件 a 为 false</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-code">
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 : </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
+</div>
+</div>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-14_15-39-46.jpg"></p>	
+<hr>
+			
+			<h1 id="unless_else语句">UNLESS...ELSE 语句</h1>
+
+<p>
+一个 unless 语句 后可跟一个可选的 else 语句，else 语句在布尔表达式为 true 时执行。</p>
+
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">unless</span><span class="hl-brackets">(</span><span class="hl-reserved">boolean_expression</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 为 false 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 为 true 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span></pre>
+
+<p>如果布尔表达式 boolean_expression 为 false，则执行 unless 块内的代码。如果布尔表达式为 true，则执行 else 块内的代码。
+</p>
+<h3>流程图</h3>
+<p>
+
+<img src="./files/1465371507-7297-unless-else-statement.jpg">
+</p>
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">100</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 unless 语句检测布尔表达式</span><span class="hl-code">
+</span><span class="hl-reserved">unless</span><span class="hl-brackets">(</span><span class="hl-var">$a </span><span class="hl-code">==</span><span class="hl-reserved"> </span><span class="hl-number">20</span><span class="hl-reserved"> </span><span class="hl-brackets">){</span><span class="hl-reserved">
+    </span><span class="hl-comment"># 布尔表达式为 false 时执行</span><span class="hl-reserved">
+    printf </span><span class="hl-quotes">"</span><span class="hl-string">给定的条件为 false</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-brackets">;</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-reserved"> 
+    </span><span class="hl-comment"># 布尔表达式为 true 时执行</span><span class="hl-reserved">
+    printf </span><span class="hl-string">"给定的条件为 true<span class="hl-special">\n</span>"</span><span class="hl-brackets">;</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">
+</span><span class="hl-reserved">print</span><span class="hl-reserved"> </span><span class="hl-string">"a 的值为 : <span class="hl-var">$a</span><span class="hl-special">\n</span>"</span><span class="hl-brackets">;</span><span class="hl-reserved">
+
+$a </span><span class="hl-brackets">=</span><span class="hl-reserved"> </span><span class="hl-string">""</span><span class="hl-brackets">;</span><span class="hl-reserved">
+</span><span class="hl-comment"># 使用 unless 语句检测布尔表达式</span><span class="hl-reserved">
+</span><span class="hl-reserved">unless</span><span class="hl-brackets">(</span><span class="hl-reserved"> $a </span><span class="hl-brackets">){</span><span class="hl-reserved">
+    </span><span class="hl-comment"># 布尔表达式为 false 时执行</span><span class="hl-reserved">
+    printf </span><span class="hl-string">"a 给定的条件为 false<span class="hl-special">\n</span>"</span><span class="hl-brackets">;</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 布尔表达式为 true 时执行</span><span class="hl-reserved">
+    printf </span><span class="hl-string">"a 给定的条件为 true<span class="hl-special">\n</span>"</span><span class="hl-brackets">;</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">
+</span><span class="hl-reserved">print</span><span class="hl-reserved"> </span><span class="hl-string">"a 的值为 : <span class="hl-var">$a</span><span class="hl-special">\n</span>"</span><span class="hl-brackets">;</span></div>
+</div>
+</div>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-15_16-48-38.jpg"></p>  
+<hr>
+			
+			<h1 id="unless_elsif_else语句">UNLESS...ELSIF...ELSE 语句</h1>
+
+<p>
+一个 unless 语句后可跟一个可选的 elsif 语句，然后再跟另一个 else 语句。</p><p>
+这种条件判断语句在多个条件的情况下非常有用。</p>
+<p>在使用 unless , elsif , else 语句时你需要注意以下几点。</p>
+<ul class="list"> <li><p>unless 语句后可以跟上 0 个 或 1 个 else 语句，但是 elsif 后面必须有 else 语句。</p></li> <li><p>unless 语句后可以跟上 0 个 或 1 个 elsif 语句，但它们必须写在 else 语句前。</p></li> <li><p>如果其中的一个 elsif 执行成功，其他的 elsif 和 else 将不再被执行。</p></li> </ul>
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">unless</span><span class="hl-brackets">(</span><span class="hl-reserved">boolean_expression </span><span class="lit">1</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 1 为 false 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">
+</span><span class="hl-reserved">elsif</span><span class="hl-brackets">(</span><span class="hl-reserved"> boolean_expression </span><span class="lit">2</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 2 为 true 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">
+</span><span class="hl-reserved">elsif</span><span class="hl-brackets">(</span><span class="hl-reserved"> boolean_expression </span><span class="lit">3</span><span class="hl-brackets">){</span><span class="hl-reserved">
+   </span><span class="hl-comment"># 在布尔表达式 boolean_expression 3 为 true 执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span><span class="hl-reserved">
+</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-reserved">
+   </span><span class="hl-comment">#  没有条件匹配时执行</span><span class="hl-reserved">
+</span><span class="hl-brackets">}</span></pre>
+
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">20</span><span class="hl-code">;
+</span><span class="hl-comment"># 使用 unless 语句检测布尔表达式</span><span class="hl-code">
+</span><span class="hl-reserved">unless</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code">  ==  </span><span class="hl-number">30</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 布尔表达式为 false 时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值不为 30</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">elsif</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> ==  </span><span class="hl-number">30</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 布尔表达式为 true 时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 30</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">else</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-comment"># 没有条件匹配时执行</span><span class="hl-code">
+    </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a  的 值为 </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-15_16-50-21.jpg"></p> 
+<hr>
+			
+<h2>三元运算符 ? :</h2>
+<p>我们可以使用 <b>条件运算 ? :</b> 来简化 <b>if...else</b> 语句的操作。通常格式为：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="typ">Exp1</span><span class="hl-reserved"> </span><span class="hl-brackets">?</span><span class="hl-reserved"> </span><span class="typ">Exp2</span><span class="hl-reserved"> </span><span class="hl-brackets">:</span><span class="hl-reserved"> </span><span class="typ">Exp3</span><span class="hl-brackets">;</span></pre>
+<p>如果 Exp1 表达式为 true ，则返回 Exp2 表达式计算结果，否则返回 Exp3。</p>
+<p>实例如下所示：</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/local/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$loot</span><span class="hl-code"> = </span><span class="hl-quotes">"</span><span class="hl-string">雷霆之怒，逐风者的祝福之剑</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-var">$iLvl</span><span class="hl-code"> = </span><span class="hl-number">80</span><span class="hl-code">;     </span><span class="hl-comment"># 装等</span><span class="hl-code">
+ 
+</span><span class="hl-var">$top</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-var">$iLvl</span><span class="hl-code"> &gt; </span><span class="hl-number">77</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">? </span><span class="hl-quotes">"</span><span class="hl-string">可以SH</span><span class="hl-quotes">"</span><span class="hl-code"> : </span><span class="hl-quotes">"</span><span class="hl-string">垃圾而已</span><span class="hl-quotes">"</span><span class="hl-code">;
+ 
+</span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-var">$loot</span><span class="hl-string"> - </span><span class="hl-var">$top</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;</span></div>
+</div>
+</div>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-10-19_15-21-55.jpg"></p> 
+							</div>
+						</div>
+						<div class="previous-next-links">
+		<div class="previous-design-link">
+		<a href="./哈希.html?pg=哈希" rel="prev" title="哈希">
+			Perl 哈希		</a>
+	</div>
+	<div class="next-design-link">
+		<a href="./循环.html?pg=循环" rel="next" title="循环">
+			Perl 循环		</a>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</body></html>
