@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF.php?pg=%E5%BE%AA%E7%8E%AF -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>循环</title>		
+	<link rel="stylesheet" href="./files/style.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="./files/font-awesome.min.css" media="all">	
+</head>
+	<body style="">
+		<div class="container navigation">
+			<div class="row">
+				<div class="col nav">
+				</div>
+			</div>
+		</div>
+		<div class="container main">
+			<div class="row">
+				<div class="col left-column">
+	<div class="tab">
+		Perl 循环	</div>
+	<div class="sidebar-box gallery-list">
+		<div class="design" id="leftcolumn">
+							<a target="_top" title="教程" href="./教程.html?pg=教程">
+								教程
+							</a>
+							<a target="_top" title="简介" href="./简介.html?pg=简介">
+								简介
+							</a>
+							<a target="_top" title="环境安装" href="h./环境安装.html?pg=环境安装">
+								环境安装
+							</a>
+							<a target="_top" title="基础语法" href="./基础语法.html?pg=基础语法">
+								基础语法
+							</a>
+							<a target="_top" title="数据类型" href="./数据类型.html?pg=数据类型">
+								数据类型
+							</a>
+							<a target="_top" title="变量" href="./变量.html?pg=变量">
+								变量
+							</a>
+							<a target="_top" title="标量" href="./标量.html?pg=标量">
+								标量
+							</a>
+							<a target="_top" title="数组" href="./数组.html?pg=数组">
+								数组
+							</a>
+							<a target="_top" title="哈希" href="./哈希.html?pg=哈希">
+								哈希
+							</a>
+							<a target="_top" title="条件语句" href="./条件语句.html?pg=条件语句">
+								条件语句	
+							</a>
+							<a target="_top" title="Perl 循环" href="./循环.html?pg=循环" style="background-color: rgb(150, 185, 125); font-weight: bold; color: rgb(255, 255, 255);">
+								循环
+							</a>
+							<a target="_top" title="运算符" href="./运算符.html?pg=运算符">
+								运算符
+							</a>
+							<a target="_top" title="子程序(函数)" href="./子程序.html?pg=子程序">
+								子程序(函数)	
+							</a>
+							<a target="_top" title="引用" href="./引用.html?pg=引用">
+								引用
+							</a>
+							<a target="_top" title="格式化输出" href="./格式化输出.html?pg=格式化输出">
+								格式化输出
+							</a>
+							<a target="_top" title="文件操作" href="./文件操作.html?pg=文件操作">
+								文件操作
+							</a>
+							<a target="_top" title="目录操作" href="./目录操作.html?pg=目录操作">
+								目录操作	
+							</a>
+							<a target="_top" title="特殊变量" href="./特殊变量.html?pg=特殊变量">
+								特殊变量	
+							</a>
+							<a target="_top" title="正则表达式" href="./正则表达式.html?pg=正则表达式">
+								正则表达式
+							</a>
+		</div>
+	</div>
+</div>
+				<div class="col middle-column">
+					<div class="article" style="background-color: rgb(255, 255, 255);">
+						<div class="previous-next-links">
+		<div class="previous-design-link">
+		<a href="./条件语句.html?pg=条件语句" rel="prev" title="条件语句">
+			Perl 条件语句		</a>
+	</div>
+	<div class="next-design-link">
+		<a href="./循环控制.html?pg=循环控制" rel="next" title="循环控制">
+			Perl 循环控制		</a>
+	</div>
+</div>
+						<div class="article-body">
+							<div class="article-intro" id="content">
+			
+			<h1>Perl 循环</h1>
+<p>有的时候，我们可能需要多次执行同一块代码。一般情况下，语句是按顺序执行的：函数中的第一个语句先执行，接着是第二个语句，依此类推。</p><p>
+编程语言提供了更为复杂执行路径的多种控制结构。</p><p>
+循环语句允许我们多次执行一个语句或语句组。</p>
+<blockquote><p>注意，数字 0, 字符串 '0' 、 "" , 空 list () , 和 undef 为 <b>false</b> ，其他值均为 <b>true</b>。 true 前面使用 <b>!</b> 或 <b>not</b>则返回 false 。</p></blockquote>
+<p>Perl 语言提供了以下几种循环类型:</p>
+
+<table class="reference">
+<tbody><tr><th style="width:30%">循环类型</th><th>描述</th></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF.php?pg=%E5%BE%AA%E7%8E%AF#while" title="Perl while 循环">while 循环</a></p></td><td>当给定条件为 true 时，重复执行语句或语句组。循环主体执行之前会先测试条件。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF.php?pg=%E5%BE%AA%E7%8E%AF#until" title="Perl until 循环">until 循环</a></p></td><td>重复执行语句或语句组，直到给定的条件为 true。 循环主体执行之前会先测试条件。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF.php?pg=%E5%BE%AA%E7%8E%AF#for" title="Perl for 循环">for 循环</a></p></td><td>多次执行一个语句序列，简化管理循环变量的代码。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF.php?pg=%E5%BE%AA%E7%8E%AF#foreach" title="Perl foreach 循环">foreach 循环</a></p></td><td>foreach 循环用于迭代一个列表或集合变量的值。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF.php?pg=%E5%BE%AA%E7%8E%AF#dowhile" title="Perl do...while 循环">do...while 循环</a></p></td><td>除了它是在循环主体结尾测试条件外，其他与 while 语句类似。</td></tr>
+<tr><td><p><a href="http://localhost:8080/Perl%e6%95%99%e7%a8%8b/%E5%BE%AA%E7%8E%AF.php?pg=%E5%BE%AA%E7%8E%AF#%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF" title="Perl 嵌套循环">嵌套循环</a></p></td><td>您可以在 while、for 或 do..while 循环内使用一个或多个循环。</td></tr>
+</tbody></table>
+<hr>
+			
+			<h1 id="while">WHILE 循环</h1>
+
+<p>
+while 语句在给定条件为 true 时，重复执行语句或语句组。循环主体执行之前会先测试条件。</p>
+
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="pln">condition</span><span class="hl-brackets">)</span><span class="pln">
+</span><span class="hl-brackets">{</span><span class="pln">
+   statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span><span class="pln">
+</span><span class="hl-brackets">}</span></pre>
+
+<p>在这里，statement(s) 可以是一个单独的语句，也可以是几个语句组成的代码块。</p><p>condition 可以是任意的表达式，当条件为 true 时执行循环。
+当条件为 false 时，程序流将退出循环。</p>
+
+<h3>流程图</h3>
+<p>
+
+<img src="./files/cpp_while_loop.png" alt="Perl 中的 while 循环">
+</p>
+<p>图表中，<i>while</i> 循环的关键点是循环可能一次都不会执行。当条件为 false 时，会跳过循环主体，直接执行紧接着 while 循环的下一条语句。</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">10</span><span class="hl-code">;
+ 
+</span><span class="hl-comment"># 执行 while 循环</span><span class="hl-code">
+</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 : </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+<p>程序中在变量 $a 小于 20 时执行循环体，在变量 $a 大于等于 20 时，退出循环。</p>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-21_10-47-41.jpg"></p>
+<hr>
+			
+			<h1 id="until">UNTIL 循环</h1>
+
+<p>
+until 语句在给定条件为 false 时，重复执行语句或语句组。</p>
+
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="pln">condition</span><span class="hl-brackets">)</span><span class="pln">
+</span><span class="hl-brackets">{</span><span class="pln">
+   statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span><span class="pln">
+</span><span class="hl-brackets">}</span></pre>
+
+<p>在这里，statement(s) 可以是一个单独的语句，也可以是几个语句组成的代码块。</p><p>condition 可以是任意的表达式，当条件为 false 时执行循环。
+当条件为 true 时，程序流将继续执行紧接着循环的下一条语句。</p>
+
+<h3>流程图</h3>
+<p>
+
+<img src="./files/1465539244-7101-until-loop.jpg" alt="Perl 中的 until 循环">
+</p>
+<p>图表中，<i>until</i> 循环的关键点是循环可能一次都不会执行。当条件为 true 时，会跳过循环主体，直接执行紧接着 while 循环的下一条语句。</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">5</span><span class="hl-code">;
+ 
+</span><span class="hl-comment"># 执行 until 循环</span><span class="hl-code">
+</span><span class="hl-reserved">until</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &gt; </span><span class="hl-number">10</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为 : </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+<p>程序中在变量 $a 小于 10 时执行循环体，在变量 $a 大于 10 时，退出循环。</p>
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-21_10-53-29.jpg"></p>
+<hr>
+			
+			<h1 id="for">FOR 循环</h1>
+
+<p>
+Perl for 循环用于多次执行一个语句序列，简化管理循环变量的代码。</p>
+
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="hl-reserved">for</span><span class="pln"> </span><span class="hl-brackets">(</span><span class="pln"> init</span><span class="pun">;</span><span class="pln"> condition</span><span class="pun">;</span><span class="pln"> increment </span><span class="hl-brackets">){</span><span class="pln">
+   statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span><span class="pln">
+</span><span class="hl-brackets">}</span></pre>
+<p>下面是 for 循环的控制流程解析：</p>
+<ol class="list"> <li><b>init</b> 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。</li> <li>接下来，会判断 <b>condition</b>。如果为 true，则执行循环主体。如果为 false，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。</li> <li>在执行完 for 循环主体后，控制流会跳回上面的 <b>increment</b> 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。</li> <li>条件再次被判断。如果为 true，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为 false 时，for 循环终止。</li> </ol>
+<p>在这里，statement(s) 可以是一个单独的语句，也可以是几个语句组成的代码块。</p>
+<p>condition 可以是任意的表达式，当条件为 true 时执行循环，当条件为 false 时，退出循环。</p>
+
+<h3>流程图</h3>
+<p>
+
+<img src="./files/cpp_for_loop.png" alt="Perl 中的 for 循环">
+</p>
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-comment"># 执行 for 循环</span><span class="hl-code">
+</span><span class="hl-reserved">for</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">; </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">10</span><span class="hl-code">; </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为: </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-21_11-02-27.jpg"></p>
+<hr>
+			
+			<h1 id="foreach">FOREACH 循环</h1>
+
+<p>
+Perl foreach 循环用于迭代一个列表或集合变量的值。</p>
+
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="kwd">foreach</span><span class="pln"> </span><span class="kwd">var</span><span class="pln"> </span><span class="pun">(</span><span class="pln">list</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">...</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<h3>流程图</h3>
+<p>
+
+<img src="./files/1465540060-1525-foreach-loop.jpg" alt="Perl 中的 foreach 循环">
+</p>
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">@list</span><span class="hl-code"> = </span><span class="hl-brackets">(</span><span class="hl-number">2</span><span class="hl-code">, </span><span class="hl-number">12</span><span class="hl-code">, </span><span class="hl-number">36</span><span class="hl-code">, </span><span class="hl-number">42</span><span class="hl-code">, </span><span class="hl-number">51</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-comment"># 执行foreach 循环</span><span class="hl-code">
+</span><span class="hl-reserved">foreach</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-var">@list</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为: </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-21_11-14-46.jpg"></p>
+<hr>
+			
+			<h1 id="dowhile">DO...WHILE 循环</h1>
+
+<p>不像 <b>for</b> 和 <b>while</b> 循环，它们是在循环头部测试循环条件。在 Perl 语言中，<b>do...while</b> 循环是在循环的尾部检查它的条件。</p>
+<p><b>do...while</b> 循环与 while 循环类似，但是 do...while 循环会确保至少执行一次循环。</p>
+<h3>语法</h3>
+<p>语法格式如下所示：</p>
+<pre class="prettyprint prettyprinted" style=""><span class="kwd">do</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="kwd">while</span><span class="pun">(</span><span class="pln"> condition </span><span class="pun">);</span></pre>
+<p>请注意，条件表达式出现在循环的尾部，所以循环中的 statement(s) 会在条件被测试之前至少执行一次。</p>
+<p>如果条件为 true，控制流会跳转回上面的 do，然后重新执行循环中的 statement(s)。这个过程会不断重复，直到给定条件变为 false 为止。</p>
+<h3>流程图</h3>
+<p>
+
+<img src="./files/cpp_do_while_loop.jpg" alt="Perl 中的 do...while 循环">
+</p>
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">10</span><span class="hl-code">;
+ 
+</span><span class="hl-comment"># 执行 do...while 循环</span><span class="hl-code">
+</span><span class="hl-reserved">do</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a 的值为: </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">15</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-09-21_14-57-39.jpg"></p>
+
+<hr>
+			
+			<h1 id="嵌套循环">循环嵌套</h1>
+
+<p>Perl 语言允许在一个循环内使用另一个循环，下面演示几个实例来说明这个概念。</p>
+<h3>语法</h3>
+<p>嵌套 for 循环语句的语法：</p>
+<div class="example"> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-reserved">for</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-identifier">init</span><span class="hl-code">; </span><span class="hl-identifier">condition</span><span class="hl-code">; </span><span class="hl-identifier">increment</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">for</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-identifier">init</span><span class="hl-code">; </span><span class="hl-identifier">condition</span><span class="hl-code">; </span><span class="hl-identifier">increment</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-code">
+   </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+<p>嵌套 while 循环语句的语法：</p>
+<div class="example"> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-identifier">condition</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-identifier">condition</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-code">
+   </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+<p>嵌套 do...while 循环语句的语法：</p>
+<div class="example"> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-reserved">do</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+   </span><span class="hl-reserved">do</span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-identifier">condition</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-brackets">}</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-identifier">condition</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
+</div>
+</div><p>嵌套 until 循环语句的语法：</p>
+<div class="example"> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-reserved">until</span><span class="hl-brackets">(</span><span class="hl-identifier">condition</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">until</span><span class="hl-brackets">(</span><span class="hl-identifier">condition</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-code">
+   </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div><p>嵌套 foreach 循环语句的语法：</p>
+<div class="example"> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-reserved">foreach</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-var">@listA</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">foreach</span><span class="hl-code"> </span><span class="hl-var">$b</span><span class="hl-code"> </span><span class="hl-brackets">(</span><span class="hl-var">@listB</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-code">
+   </span><span class="hl-identifier">statement</span><span class="hl-brackets">(</span><span class="hl-identifier">s</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">;
+</span><span class="hl-var">$b</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">;
+ 
+</span><span class="hl-comment"># 外部循环</span><span class="hl-code">
+</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">3</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-var">$b</span><span class="hl-code"> = </span><span class="hl-number">0</span><span class="hl-code">;
+   </span><span class="hl-comment"># 内部循环</span><span class="hl-code">
+   </span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$b</span><span class="hl-code"> &lt; </span><span class="hl-number">3</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+      </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a = </span><span class="hl-var">$a</span><span class="hl-string">, b = </span><span class="hl-var">$b</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+      </span><span class="hl-var">$b</span><span class="hl-code"> = </span><span class="hl-var">$b</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+   </span><span class="hl-brackets">}</span><span class="hl-code">
+   </span><span class="hl-var">$a</span><span class="hl-code"> = </span><span class="hl-var">$a</span><span class="hl-code"> + </span><span class="hl-number">1</span><span class="hl-code">;
+   </span><span class="hl-reserved">print</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">a = </span><span class="hl-var">$a</span><span class="hl-special">\n</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+
+<p>执行以上程序，输出结果为：</p>
+<p><img width="50%" src="./files/Xnip2020-10-19_15-29-01.jpg"></p>
+<hr>
+<h2>无限循环</h2>
+<p>如果条件永远不为 false，则循环将变成无限循环。</p><p>
+for 循环在传统意义上可用于实现无限循环。</p><p>由于构成循环的三个表达式中任何一个都不是必需的，您可以将某些条件表达式留空来构成一个无限循环。</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+<div class="hl-main"><span class="hl-special">#!/usr/bin/perl</span><span class="hl-code">
+ 
+</span><span class="hl-reserved">for</span><span class="hl-brackets">(</span><span class="hl-code"> ; ; </span><span class="hl-brackets">)</span><span class="hl-code">
+</span><span class="hl-brackets">{</span><span class="hl-code">
+   </span><span class="hl-reserved">printf</span><span class="hl-code"> </span><span class="hl-quotes">"</span><span class="hl-string">循环会无限执行。</span><span class="hl-special">\n</span><span class="hl-quotes">"</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span></div>
+</div>
+</div>
+<blockquote><p>你可以按下 Ctrl + C 键来终止循环。</p></blockquote>
+<p>当条件表达式不存在时，它被假设为 true
+。您也可以设置一个初始值和增量表达式，但是一般情况下，Perl 程序员偏向于使用 for(;;) 结构来表示一个无限循环。</p>
+
+							</div>
+						</div>
+						<div class="previous-next-links">
+		<div class="previous-design-link">
+		<a href="./条件语句.html?pg=条件语句" rel="prev" title="条件语句">
+			Perl 条件语句		</a>
+	</div>
+	<div class="next-design-link">
+		<a href="./循环控制.html?pg=循环控制" rel="next" title="循环控制">
+			Perl 循环控制		</a>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</body></html>
