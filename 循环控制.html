@@ -3,8 +3,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<title>循环控制</title>		
-	<link rel="stylesheet" href="./循环控制_files/style.css" type="text/css" media="all">	
-	<link rel="stylesheet" href="./循环控制_files/font-awesome.min.css" media="all">	
+	<link rel="stylesheet" href="./files/style.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="./files/font-awesome.min.css" media="all">	
 </head>
 	<body style="">
 		<div class="container navigation">
@@ -138,7 +138,7 @@ Perl 提供了下列的循环控制语句:</p>
 </div>
 
 <p>执行以上程序，输出结果为：</p>
-<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_10-19-13.jpg"></p>
+<p><img width="50%" src="./files/Xnip2020-10-20_10-19-13.jpg"></p>
 <div class="example"> 
 <h2 class="example">实例 2</h2> 
 <div class="example_code">
@@ -163,7 +163,7 @@ Perl 提供了下列的循环控制语句:</p>
 </div>
 
 <p>执行以上程序，输出结果为：</p>
-<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_10-57-31.jpg"></p>
+<p><img width="50%" src="./files/Xnip2020-10-20_10-57-31.jpg"></p>
 <hr>
 			<h1 id="last">LAST 语句</h1>
 
@@ -172,7 +172,7 @@ Perl 提供了下列的循环控制语句:</p>
 <p>语法格式如下所示：</p>
 <pre class="prettyprint prettyprinted" style=""><span class="kwd">last</span><span class="pln"> </span><span class="pun">[</span><span class="pln">LABEL</span><span class="pun">];</span></pre>
 <h3>流程图</h3><p>
-<img src="./循环控制_files/ERShqly0WPBE4Sh4.png"></p>
+<img src="./files/ERShqly0WPBE4Sh4.png"></p>
 
 <div class="example"> 
 <h2 class="example">实例</h2> 
@@ -194,7 +194,7 @@ Perl 提供了下列的循环控制语句:</p>
 </div>
 
 <p>执行以上程序，输出结果为：</p>
-<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-08-23.jpg"></p>
+<p><img width="50%" src="./files/Xnip2020-10-20_11-08-23.jpg"></p>
 <hr>
 			<h1 id="continue">CONTINUE 语句</h1>
 
@@ -231,7 +231,7 @@ continue 语句可用在 while 和 foreach 循环中。</p>
 </div>
 
 <p>执行以上程序，输出结果为：</p>
-<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-21-51.jpg"></p>
+<p><img width="50%" src="./files/Xnip2020-10-20_11-21-51.jpg"></p>
 <p>foreach  循环中使用 continue 语句：</p>
 <div class="example"> 
 <h2 class="example">实例</h2> 
@@ -248,7 +248,7 @@ continue 语句可用在 while 和 foreach 循环中。</p>
 </div>
 
 <p>执行以上程序，输出结果为：</p>
-<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-23-14.jpg"></p>
+<p><img width="50%" src="./files/Xnip2020-10-20_11-23-14.jpg"></p>
 <hr>
 			<h1 id="redo">REDO 语句</h1>
 
@@ -262,7 +262,7 @@ continue 语句可用在 while 和 foreach 循环中。</p>
 <p>
 带标号修饰符LABEL的redo语句表示把循环控制流程直接转到与标号修饰符LABEL相关联的语句块的第一行处开始执行，而不再执行redo语句之后的语句和continue语句块；</p><p>不带标号修饰符LABEL的redo语句表示把循环控制流程直接转到当前语句块的第一行处开始执行，而不再执行redo语句之后的语句和continue语句块；</p><p>如果是在for循环中或者是带有continue语句块，则for循环中的递增列表和continue语句块都不再被执行；</p>
 <h3>流程图</h3>
-<p><img src="./循环控制_files/uj2WtOPIzZ3W1TQr.png"></p>
+<p><img src="./files/uj2WtOPIzZ3W1TQr.png"></p>
 <div class="example"> 
 <h2 class="example">实例</h2> 
 <div class="example_code">
@@ -283,7 +283,7 @@ continue 语句可用在 while 和 foreach 循环中。</p>
 
 <p>执行以上程序，输出结果为：</p>
 <p>执行以上程序，输出结果为：</p>
-<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-59-46.jpg"></p>
+<p><img width="50%" src="./files/Xnip2020-10-20_11-59-46.jpg"></p>
 <hr>
 			<h1 id="goto">GOTO 语句</h1>
 
@@ -309,7 +309,7 @@ continue 语句可用在 while 和 foreach 循环中。</p>
 </span><span class="kwd">goto</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln">NAME</span></pre>
 <h3>流程图</h3>
 <p>
-<img src="./循环控制_files/6MJfHRLsRGHLRCel__original.png">
+<img src="./files/6MJfHRLsRGHLRCel__original.png">
 </p><h3>实例</h3>
 <p>以下两个实例在变量 $a 为 15 时跳出输出。</p>
 <p>以下是一个常用的 goto 实例：</p>
@@ -336,7 +336,7 @@ continue 语句可用在 while 和 foreach 循环中。</p>
 </div>
 
 <p>执行以上程序，输出结果为：</p>
-<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-49-20.jpg"></p>
+<p><img width="50%" src="./files/Xnip2020-10-20_11-49-20.jpg"></p>
 <p>
 以下实例使用了 goto EXPR形式。我们使用了两个字符串，并使用点号 (.) 来链接。 </p>
 <div class="example"> 
@@ -359,7 +359,7 @@ continue 语句可用在 while 和 foreach 循环中。</p>
 </span><span class="hl-brackets">}</span><span class="hl-reserved">while</span><span class="hl-brackets">(</span><span class="hl-code"> </span><span class="hl-var">$a</span><span class="hl-code"> &lt; </span><span class="hl-number">20</span><span class="hl-code"> </span><span class="hl-brackets">)</span><span class="hl-code">;</span></div>
 </div>
 </div><p>执行以上程序，输出结果为：</p>
-<p><img width="50%" src="./循环控制_files/Xnip2020-10-20_11-54-18.jpg"></p>
+<p><img width="50%" src="./files/Xnip2020-10-20_11-54-18.jpg"></p>
 
 							</div>
 						</div>
